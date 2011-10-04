@@ -31,14 +31,14 @@ public class DesktopSettings extends JInternalFrame implements ActionListener//,
 	Toolkit toolkit =  Toolkit.getDefaultToolkit();
 	Dimension ScreenResolution = toolkit.getScreenSize();
 
-	JButton apply, cancel;
+	JButton cancel;
 	JList wall_list;
 	Container ContentPane;
 	JTabbedPane tabs;
 
 	private void Components()
 	{
-		apply = new JButton("Apply");
+		//apply = new JButton("Apply");
 		cancel = new JButton("Cancel");
 			cancel.addActionListener(this);
 		tabs = new JTabbedPane();			
@@ -52,9 +52,9 @@ public class DesktopSettings extends JInternalFrame implements ActionListener//,
 	{	tabs.add("Preferences", new OtherPreferences());
 		tabs.add("Theme Selector", new ThemeSelector());
 		tabs.add("Wallpaper", new JLayeredPane());
-		ContentPane.add(tabs, "w 100%, h 100%,span 2, wrap");
-		ContentPane.add(apply, "w 100, h 26, x 180");
-		ContentPane.add(cancel, "w 100, h 26, x 290, gapright 10,  wrap");
+		ContentPane.add(tabs);
+		//ContentPane.add(apply, "w 100, h 26, x 180");
+		//ContentPane.add(cancel, "w 100, h 26, x 290, gapright 10,  wrap");
 	}
 	
 	public void actionPerformed(ActionEvent event)
@@ -75,7 +75,7 @@ public class DesktopSettings extends JInternalFrame implements ActionListener//,
 	{
 		Components();
 		addComponents();	
-		this.setSize(400,400);
+		this.setSize(415,500);
 		this.setLocation((((int)ScreenResolution.getWidth())/2) - (this.getWidth())/2 ,(((int)ScreenResolution.getHeight())/2) - (this.getHeight())/2);
 		this.setTitle("Desktop Settings");
 		this.setClosable(true);
