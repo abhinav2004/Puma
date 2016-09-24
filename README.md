@@ -1,8 +1,5 @@
-<b>NO LONGER MAINTAINED.</b> 
-<p>
+<h3>NO LONGER MAINTAINED.</h3> 
 This is one of my first projects. It's a very old one and will not be working on it anymore. 
-
-README
 
 Project: A desktop environment in Java
 Project Codename: Puma
